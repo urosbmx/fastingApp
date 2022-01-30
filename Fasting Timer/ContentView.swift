@@ -4,13 +4,13 @@
 //
 //  Created by Uroš Katanić on 22.1.22..
 //
-//Stigao sam do 49:13
-//https://www.youtube.com/watch?v=pdYTtbOl9YQ&t=1230s
+
 
 import SwiftUI
 
 struct ContentView: View {
     @StateObject var fastingMenager = FastingManager()
+ 
     
     
     var title: String{
@@ -77,20 +77,41 @@ struct ContentView: View {
                             .fontWeight(.bold)
                     }
                 }
-                
-                //MARK: Button
-                
-                Button{
-                    fastingMenager.toogleFastingState()
-                }label: {
-                    Text (fastingMenager.fastingState == .fasting ? "End fast": "Start fasting")
-                        .fontWeight(.semibold)
-                        .padding(.horizontal, 24)
-                        .padding(.vertical, 8)
-                        .background(.thinMaterial)
-                        .cornerRadius(20)
+//                Spacer()
+                HStack{
+                    //MARK: Button
                     
+                    Button{
+                        fastingMenager.toogleFastingState()
+                    }label: {
+                        Text (fastingMenager.fastingState == .fasting ? "End fast": "Start fasting")
+                            .fontWeight(.semibold)
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 8)
+                            .background(.thinMaterial)
+                            .cornerRadius(20)
+                        
+                    }
+//                    Spacer()
+                    Button{
+                        fastingMenager.toogleFasting()
+                    }label: {
+                        Text ("Change plan")
+                            .fontWeight(.semibold)
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 8)
+                            .background(.thinMaterial)
+                            .cornerRadius(20)
+                            .padding()
+                            
+                        
+                    }
+                    .disabled(fastingMenager.fastingActive)
+
                 }
+                
+      
+                
                 
         
             }

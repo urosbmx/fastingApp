@@ -33,7 +33,8 @@ enum FastingPlan: String{
 
 class FastingManager: ObservableObject{
     @Published private(set) var fastingState: FastingState = .notStarted
-    @Published private(set) var fastingPlan: FastingPlan = .intermediate
+    @Published private(set) var fastingPlan: FastingPlan = .beginer
+    @Published private(set) var fastingActive = false
     @Published private(set) var  startTime: Date{
         didSet {
             print("staritngTime",
@@ -70,14 +71,6 @@ class FastingManager: ObservableObject{
     init(){
         let calendar = Calendar.current
         
-//        var components = calendar.dateComponents([.year, .month, .day, .hour ], from: Date())
-//
-//        components.hour = 20
-//        print(components)
-//
-//        let scheduledTime = calendar.date(from: components) ?? Date.now
-//        print("scheduledTime", scheduledTime.formatted(.dateTime.day().hour().minute().second()))
-        
         let components = DateComponents(hour:20)
         let scheduledTime = calendar.nextDate(after: .now , matching:  components, matchingPolicy: .nextTime)!
         print("schedualedTime", scheduledTime.formatted(.dateTime.month().day().hour().minute().second()))
@@ -91,6 +84,18 @@ class FastingManager: ObservableObject{
         fastingState = fastingState == .fasting ? .feeding : .fasting
         startTime = Date()
         elapseTime = 0.0
+        fastingActive = true
+        print(fastingActive)
+    }
+    
+    func toogleFasting(){
+        if(fastingPlan == .beginer){
+            fastingPlan = .intermediate
+        }else if(fastingPlan == .intermediate){
+            fastingPlan = .advance
+        }else{
+            fastingPlan = .beginer
+        }
     }
     func track(){
         guard fastingState != .notStarted else{return}
@@ -102,7 +107,6 @@ class FastingManager: ObservableObject{
             elapse = true
         }
         elapseTime += 1
-//        print(elapseTime)
         
         let totalTime = fastingState  == .fasting ? fastingTime: feadingTime
         progress = (elapseTime / totalTime  * 100).rounded() / 100
