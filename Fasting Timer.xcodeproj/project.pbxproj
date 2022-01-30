@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		676E020627A33C9C002365D4 /* FastingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676E020527A33C9C002365D4 /* FastingManager.swift */; };
 		67CD929C279C882A009FBF89 /* Fasting_TimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD929B279C882A009FBF89 /* Fasting_TimerApp.swift */; };
 		67CD929E279C882A009FBF89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD929D279C882A009FBF89 /* ContentView.swift */; };
 		67CD92A0279C882B009FBF89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CD929F279C882B009FBF89 /* Assets.xcassets */; };
 		67CD92A3279C882B009FBF89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CD92A2279C882B009FBF89 /* Preview Assets.xcassets */; };
+		67CD92AA279C894C009FBF89 /* ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD92A9279C894C009FBF89 /* ProgressRing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		676E020527A33C9C002365D4 /* FastingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingManager.swift; sourceTree = "<group>"; };
 		67CD9298279C882A009FBF89 /* Fasting Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fasting Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CD929B279C882A009FBF89 /* Fasting_TimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fasting_TimerApp.swift; sourceTree = "<group>"; };
 		67CD929D279C882A009FBF89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		67CD929F279C882B009FBF89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67CD92A2279C882B009FBF89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		67CD92A9279C894C009FBF89 /* ProgressRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				67CD929B279C882A009FBF89 /* Fasting_TimerApp.swift */,
+				67CD92A9279C894C009FBF89 /* ProgressRing.swift */,
+				676E020527A33C9C002365D4 /* FastingManager.swift */,
 				67CD929D279C882A009FBF89 /* ContentView.swift */,
 				67CD929F279C882B009FBF89 /* Assets.xcassets */,
 				67CD92A1279C882B009FBF89 /* Preview Content */,
@@ -139,6 +145,8 @@
 			files = (
 				67CD929E279C882A009FBF89 /* ContentView.swift in Sources */,
 				67CD929C279C882A009FBF89 /* Fasting_TimerApp.swift in Sources */,
+				676E020627A33C9C002365D4 /* FastingManager.swift in Sources */,
+				67CD92AA279C894C009FBF89 /* ProgressRing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +283,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,6 +313,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
